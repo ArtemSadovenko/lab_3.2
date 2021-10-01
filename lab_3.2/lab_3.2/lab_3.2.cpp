@@ -10,6 +10,7 @@ int main()
 	double x;
 	double c;
 	double y;
+	double y1;
 
 	cout << "a = "; cin >> a;
 	cout << "b = "; cin >> b;
@@ -26,7 +27,20 @@ int main()
 		y = (x + 5) / (c * (x - 10));
 	}
 
-	cout << "F = " << y;
+	if (x < 0 && b != 0) {
+		y1 = (a * x * x) - (b * x * x);
+	}
+	if (x > 0 && b == 0) {
+		y1 = (x - a) / (x - c);
+	}
+	else {
+		y1 = (x + 5) / (c * (x - 10));
+	}
+
+
+
+	cout << "F = " << y << endl;
+	cout << "F = " << y1;
 
 	return 0;
 }
